@@ -1,0 +1,32 @@
+﻿<Window x:Class="SR_Pichers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SR_Pichers"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        
+        <TabControl >
+            <TabItem Header="Image Link">
+                <StackPanel Orientation="Horizontal">
+                    <ListBox x:Name="ImageLinkListBox" SelectionChanged="ImageLinkListBox_SelectionChanged"/>
+                    <StackPanel x:Name="ImageLinkStackPanel" Orientation="Vertical">
+                        <Button x:Name="ImageLinkkBTN" Content="Add Image" Click="ImageLinkkBTN_Click"></Button>
+                        <Image Width="300" Height="300" x:Name="ImageLinkImage"></Image>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Image">
+                <StackPanel Orientation="Horizontal">
+                <ListBox x:Name="ImageListBox"></ListBox>
+                <StackPanel  Orientation="Vertical">
+                    <Button x:Name="ImageBTN" Content="Add Image" Click="ImageBTN_Click"></Button>
+                    <Image x:Name="ImageImage"></Image>
+                </StackPanel>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
